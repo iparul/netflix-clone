@@ -1,0 +1,16 @@
+.myList_content {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.myList_content > h2 {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  color: white;
+}
+.myList_posters {
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+  margin-left: 2rem;
+}
