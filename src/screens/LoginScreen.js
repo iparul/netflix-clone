@@ -12,7 +12,7 @@ function LoginScreen() {
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
         />
         <button className="loginScreen_button" onClick={() => setSignIn(true)}>
-          Sigin IN
+          Sign IN
         </button>
         <div className="loginScreen_gradient" />
       </div>
