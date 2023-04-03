@@ -11,10 +11,10 @@ import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 let myList = [];
 let trailer = [
-  "https://imdb-video.media-imdb.com/vi63356441/1434659607842-pgv4ql-1589994136439.mp4?Expires=1677763154&Signature=kg0vpPwBspfOZYtn6LkqhxEqwaNDtplojxGqQILc5Wys9zcfaDrf6BEPsBcssu8mt6lxJkoZQIFxH9L0-52jOeY9qMvs-7286NHA9PDye2JRBjlB4yihkJk233m6mzVrxQSOr3Wd6zL3ONljSIQq~eMF~bOiFDd~FzIM86WvWdx~JDlK2ZZM9FuSDPiRdY~jxoWr5xkSdBwcMM4UAB9rXIulz6ezcVmuRtpuiLPhkCvxioZuT776ncqKljUErOxe82KzGkdv9qtfrf9RAoOHjM2PCnldOTaMyjTXCmKF7fASB8abwmQsVHbNezCMA0HqJ~Gdy8Zlq7fppjMJ2UjxIg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-  "https://imdb-video.media-imdb.com/vi554943001/1434659607842-pgv4ql-1658938119009.mp4?Expires=1677760273&Signature=eVT5whbRSPM88mJ682DX9DSlLps8~OUdVNP3MLiquyCF7m6KzNrLMSP9fHnHM6u99qWzeB8f2FVJ0L14RM6PhQSGGNCcO6zl6kzyB2nMXKBU7Aoh6PTa5KfEnYkbzNOiBHoRy4FNl5cYUMRiCk3NdHylMGxTq3NXGN-oj~T8caxwB~f~9uekB6aFI8aL~5gs44JXSAlCmvldsXlENHWlZ3T0MlYg74rhiAYrIzUD4J3df5IASE5xtNXOEj7HMR1kYlL7i1gEGR0379GnKIzMK4XB1Gr43BsGQMNY28~Acin-UdLGy6pvXufUlS9dpwjsBZV78G6lQdxr9~jbKZUKWw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-  "https://imdb-video.media-imdb.com/vi4240746009/1434659607842-pgv4ql-1563699164137.mp4?Expires=1677763415&Signature=fmCaxXiIOw4WwGWbl~VADGTIuXJIL2KFe2lTtLlTbffEnCgWsoKUGQlmY5ZIfD1qX-fAt85KXPHYfe8rSRVqW-Czfmn2K7FB1bEi1p7fgNM4JdHhqwmUgIF2XNzIa-EncK0YwTWN4m6mbqHd6ji1x6ry86~D2Dc6vxQcVUKs38Jjk5WmJgdt2iQnLejla5sBl3yWQ187QzyW7to4qAwXN7-tOye48UHDC4biVlGypDWrCDIaYkB2nxQEzKlFzV6pZZF9Q3vr13NmuhnU-oBDifeX66jVwdtdajB5cEgWBCieFER9T8A2A8hC9IMf7UDQP5J7oVJgG7J-76fdmir~3g__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
-  "https://imdb-video.media-imdb.com/vi2686888217/1434659607842-pgv4ql-1564151957171.mp4?Expires=1677764029&Signature=mdvXNJHlOXNk3l1FC9UIrGhpIflanAXBI5ARCiczhhYngR4ZRWJo~-LiasQvUtt2xFfMaV04puRt1W23-2DhhCMS2vIYkEmHipt8d09XcowJn~s2rhxYlWGH-oDuoosqMavdrZAzpO8li~jFOy1dzarik7C0PaIIV4BzEtqMFg1YrzdiWQEGy3IopfKFR5iU13nktu51DK-ey2aoS4Fp-KM2RyoUEmzImj2gk2ZbfHWiNp5qeohdo7bgnFljIPdBTwy4TqR6jcn~C-jA3h2M7yfb1tkxZNsjPK8hCpxGCSd~gYain~BDu~A1TZq9ASGlR55v148uxtNWXSETd1FDXg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+  "https://imdb-video.media-imdb.com/vi554943001/1434659607842-pgv4ql-1658938119009.mp4?Expires=1680535640&Signature=HqzYF2yKpJoGEY0Og54mHAk205fGaAYhuEahruD9v-kttMuV-L8LJ5Ui44LL10F3b-j8vQHltgAdy3zUKyv9wUa-9WxU8WweMIunhDpJXBEzPXpNLnxHQs5fPgG2~C7hujj30bSurupQ~aq1DKjnUDoGx4aBaJ8tzHwiVvQB9fDzW6KdrUJHQrgWUhYIsIdii4-q0GDNk5F9iL~~jur3zaFEwZg6dPle4QZeS98jWod4VyyHqt41yAMUZvgzsjtOyoYW8TkxbjYyd6sehi4S~L61hNK-HxTbG5gd5FLyvF5XSVveR-m2b56pWjIzvSmEIRjN3pw2O4rZZhrsnYJidg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+  "https://imdb-video.media-imdb.com/vi63356441/1434659607842-pgv4ql-1589994136439.mp4?Expires=1680536295&Signature=GY2oOfG48FXgkEC3188TT9L5UJ5LO3d5pWbOTpAx1f2MDcftXijYuMrzW6s6Q0kp9KdEosAiYan9ryFTGmGrmJ488O1KLa-7VNhhvZAHZAYOSpad~F72msiyuqgaTaMvhjVvS5~pBpMIQhSF2gijvb1YNnCWCzBSfP2Qa~uLns9BAnr5~aast-C8E2vjKhRqkmAl0hebjczLQuQqWxJ2rQUI~JVdFyU4P5mDZra24xSqbZptJlj2NPg-rKhTWDMbdoxo9ReQei3HdNG-C-tTHsJNCthoSRLIqN~6VqmIG2SvXIohCgfLhihBkGB6LW6DUPibHyJHTMVESsttj~JrwQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+  "https://imdb-video.media-imdb.com/vi1245823513/1434659607842-pgv4ql-1663769136412.mp4?Expires=1680536175&Signature=soFUSjrZgh~1yA6pm6Qdjpec4pFsOlEAbS7JjV7Vm0HPpb75WXLIUF1xI09xHi5MMFEljqQ0yAyuJ30KXTbxDz9zqYyl3jNmEnnXbdMaBn6o8pedwuMBQSw1it6O2nU9Wb~ddhudK6sCDJzSXAmBhun6bkVSKt0eFutIB44jDsZ4HnkWvAuO0K0ylxk7DqFvtuFM9Cby0z8rhK~1p2v3kG8UYuqdeaYjLKhiADHEGLWU3l7OLPFMEcUJdiX689eKPFcF-COyRBu2X2XTUCB6uB~MAh8sP8zCkIEcFOFD-0zPx4Ybf94hbIbkDwHB0gF6NMFuv9rKFeN64KrX~R3~Yg__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
+  "https://imdb-video.media-imdb.com/vi744668441/1434659607842-pgv4ql-1555196481777.mp4?Expires=1680536641&Signature=S4d7cal~fG189ejx3FN8ZPlb1uWC-B4i7emUrLBYjqBVcD-KRzXnQtRXAKkQcFUHw4k7VhzTB8px8pN0xyczJYUAYGN~GHoHbv3aN1hNEtTEJTTPVuB-qaAlTB~3vA91DMtTxDsDCyz5iUEkgWMWRpJh05olJBFhFdNkC1svJ-sgPMhVW5EpnQ72FCQhbEUk62r1S5wFufj0WT5XqBUiU4e~s-L~feBZ9frYlwMAXOas0jasyWzmSQx1~LZBE2zEYAlzxowIb~NLzY00nM7sLpglWmuqirXP~CB-4YJ2ncU3RiOqP6E9CnkpW6rzY8shQi9eMpF6Uf9thPqGN8ln7Q__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
   "https://imdb-video.media-imdb.com/vi602522137/1434659607842-pgv4ql-1654536060777.mp4?Expires=1677764153&Signature=CC6HIwJSsyegAh34C4HkJYQavQIuxciwdNriUqyDArxJGHoyroVW39Z-oQmyBCNcXGxcS8nCbU~M-xsGK0qQkCxypW2bwMQoudr278hmjEszsi6WX9-n5LH28lXeUaQb9edGEpt1KzbkqxRuclxGuHYDcHcbWMIuDFIjTcaxSTCRO8A8phh9mKaREGrN30fWNADlEqtb3d6~lC6NjZhyKQhwTMs01tooww2RVvK7BcKjv8yjjrDPY16Gw52OS13lYHzZKnjs5WGkuitn0c768oZed32WhuVxBJOJLdAm9MFXpOP6dN1z7Iw9JAULYKti0Vp9sz-qajNBiATiqJqL2A__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
   "https://imdb-video.media-imdb.com/vi2020065817/1434659607842-pgv4ql-1661782648378.mp4?Expires=1677764219&Signature=GDg62PmcRheKgn8X7j3IGT~OUQur~AEhBcvo0NzwoFVMLnjSoK4wCO8aZ~1gplikv~IFxroGuZDhfA500SZM5Ab4aZSaaVc7vQ4pQgcGAtM1rjph7F9gdrxD5j2cQn3E1oVmuXpIFpwlk6TNPwsOFO8u-6vx4yJ1U7TGt15MPs~eFsM7dFcg-QuZwlKSFF5fqW7bm4l2Qvna48HvqGQT9LvYD-~DWdMWd4nKfKYUamLqH840xJvCPg2udsp1SllezD0EutgVnsty4l1cyaIYKO28uWGSUgLyCkFUsWNMR46Ano13zDutOi1ZpB9HFmNwPEqzCpN4ks~NmoEkrf~JCQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
   "https://imdb-video.media-imdb.com/vi1072284185/1434659607842-pgv4ql-1654533085801.mp4?Expires=1677764315&Signature=mZxX8~RmFOZ97bP9fp2rrN7jbSXTeKC8e6xH6mK5z7dlkF2kuxfrvZ1XrNA63UGwWkfhvHMuCJL1Chwda3VUW1csKvy1UsU31sTkXBHFUKAoJnbAcvXnEPWFWK6hzZgSgAWvWjiYfG1l~gL-lyo89Gj109uIsI6emoL~Eh~2XDQWzQgTYQbmFBRlYQdfjLm0XrCKVjmCsdrMrxqsK3BcuqV2uN-BBdGFJ~KdArjrzVunieRiod6zkPmZ6OR3RsL5r30hvhG3h8-mPhIWRpt75eKxMLcLZ~4L27u69iKoj1gHO9dZWUBGeh5xeDqpTikpvlWCbU2~nIz~JYZvDp4LFQ__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA",
@@ -31,8 +31,20 @@ function SingleImage({
   const { user } = useSelector(selectUser);
   const [isHovered, setIsHovered] = useState(false);
   const [index, setIndex] = useState(0);
+  const [liked, setLiked] = useState(isLiked);
   const base_url = "https://image.tmdb.org/t/p/original/";
+
+  useEffect(() => {
+    const movieString = localStorage.getItem(user && user.email);
+    movieString &&
+      JSON.parse(movieString).filter((value) => {
+        if (value.id === movie.id) {
+          setLiked(true);
+        }
+      });
+  }, [isHovered]);
   const addToMyList = (movie) => {
+    setLiked(true);
     myList.push(movie);
     const movieString = JSON.stringify(myList);
 
@@ -45,7 +57,7 @@ function SingleImage({
   useEffect(() => {
     generateRandom();
   }, [isHovered]);
-  function generateRandom(maxLimit = 9) {
+  function generateRandom(maxLimit = 4) {
     let rand = Math.random() * maxLimit;
 
     rand = Math.floor(rand); // 99
@@ -108,7 +120,7 @@ function SingleImage({
                   title="Dislike"
                   className="IoPlayCircleSharp"
                 />
-                {isLiked ? (
+                {liked ? (
                   <BsCheck
                     title="Remove From List"
                     className="IoPlayCircleSharp"
